@@ -1,8 +1,8 @@
 # QZS L6 Tool: quasi-zenith satellite L6-band tool, ver.0.1.7
 
-![QZS L6 Tool](docs/img/qzsl6tool.png)
+![QZS L6 Tool](https://raw.githubusercontent.com/yoronneko/qzsl6tool/main/docs/img/qzsl6tool.png)
 
-[日本語](readme.md)
+[日本語](https://github.com/yoronneko/qzsl6tool/blob/main/readme.md)
 
 ## Summary
 
@@ -11,7 +11,7 @@
 - It is designed to be used in conjunction with tools such as ``nc`` of netcat, and ``str2str`` of [RTKLIB](https://github.com/tomojitakasu/RTKLIB).
 - Initially, it aimed to display the content of augmentation messages broadcasted by the quasi-zenith satellite Michibiki (QZS) in the L6 frequency band, including CLAS and MADO. However, it is now also capable of displaying Galileo HAS messages.
 - [Semantic versioning](https://packaging.python.org/en/latest/discussions/versioning/#choosing-a-versioning-scheme) has been applied since 2024-08-11.
-- [Release note](release_note.md)
+- [Release note](https://github.com/yoronneko/qzsl6tool/blob/main/release_note.md)
 
 ## Operating Environment
 
@@ -52,32 +52,32 @@ Those who use Windows Git CLI, please execute ``git config --global core.autocrl
 
 | display | code |
 |:----:|:-------:|
-| RTCM |[rtcmread.py](docs/en/rtcmread.md) |
-| QZSS L6 |[qzsl6read.py](docs/en/qzsl6read.md) |
-| QZSS L1S | [qzsl1sread.py](docs/en/qzsl1sread.md) |
-| Galileo I/NAV | [galinavread.py](docs/en/galinavread.md) |
-| Galileo HAS |[gale6read.py](docs/en/gale6read.md) |
-|BeiDou PPP-B2b | [bdsb2read.py](docs/en/bdsb2read.md)|
+| RTCM |[rtcmread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/rtcmread.md) |
+| QZSS L6 |[qzsl6read.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/qzsl6read.md) |
+| QZSS L1S | [qzsl1sread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/qzsl1sread.md) |
+| Galileo I/NAV | [galinavread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/galinavread.md) |
+| Galileo HAS |[gale6read.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/gale6read.md) |
+|BeiDou PPP-B2b | [bdsb2read.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/bdsb2read.md)|
 
 ## GNSS Receiver Data Conversion
 
 | GNSS receiver | code | QZS L6 | QZS L1S | Galileo HAS | Galileo I/NAV | BeiDou B2b |
 |:----:|:---:| :-------:|:-----------:|:--------:|:---:|:---:|
-| Allystar HD9310 option C | [alstread.py](docs/en/alstread.md) |``-l`` option | | | | |
-| [Pocket SDR](https://github.com/tomojitakasu/PocketSDR) | [psdrread.py](docs/en/psdrread.md) | ``-l`` option | ``-l1s`` option | ``-e`` option | ``-i`` option| ``-b`` option|
-| NovAtel OEM729 | [novread.py](docs/en/novread.md) | | | ``-e`` option | | |
-| Septentrio mosaic-X5 | [septread.py](docs/en/septread.md) | | | ``-e`` option | | ``-b`` option|
-| Septentrio mosaic-CLAS | [septread.py](docs/en/septread.md) |``-l`` option | | | | |
-| u-blox ZED-F9P | [ubxread.py](docs/en/ubxread.md) | | ``-l1s`` option | | ``-i`` option| |
+| Allystar HD9310 option C | [alstread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/alstread.md) |``-l`` option | | | | |
+| [Pocket SDR](https://github.com/tomojitakasu/PocketSDR) | [psdrread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/psdrread.md) | ``-l`` option | ``-l1s`` option | ``-e`` option | ``-i`` option| ``-b`` option|
+| NovAtel OEM729 | [novread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/novread.md) | | | ``-e`` option | | |
+| Septentrio mosaic-X5 | [septread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/septread.md) | | | ``-e`` option | | ``-b`` option|
+| Septentrio mosaic-CLAS | [septread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/septread.md) |``-l`` option | | | | |
+| u-blox ZED-F9P | [ubxread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/ubxread.md) | | ``-l1s`` option | | ``-i`` option| |
 
 ## Time & Coordinate Conversion
 
 | conversion | code |
 |:--:|:--:|
-|GPS time, GST, BST &rarr; UTC time | [gps2utc.py](docs/en/gps2utc.md) |
-|UTC time &rarr; GPS time, GST, BST | [utc2gps.py](docs/en/utc2gps.md)|
-|LLH &rarr;  ECEF | [llh2ecef.py](docs/en/llh2ecef.md)|
-|ECEF &rarr;  LLH | [ecef2llh.py](docs/en/ecef2llh.md)|
+|GPS time, GST, BST &rarr; UTC time | [gps2utc.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/gps2utc.md) |
+|UTC time &rarr; GPS time, GST, BST | [utc2gps.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/utc2gps.md)|
+|LLH &rarr;  ECEF | [llh2ecef.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/llh2ecef.md)|
+|ECEF &rarr;  LLH | [ecef2llh.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/ecef2llh.md)|
 
 ## Directory Structure
 
