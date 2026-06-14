@@ -1,4 +1,4 @@
-# QZS L6 Tool: quasi-zenith satellite L6-band tool, ver.0.1.7
+# QZS L6 Tool: quasi-zenith satellite L6-band tool, ver.0.1.7a1
 
 ![QZS L6 Tool](https://raw.githubusercontent.com/yoronneko/qzsl6tool/main/docs/img/qzsl6tool.png)
 

@@ -1,5 +1,9 @@
 # Release Note on QZS L6 Tool
 
+## ver.0.1.7a1 (2026-06-15)
+
+- Fixed PyPI project description links to Japanese/English README files, release notes, documentation files, and the project image.
+
 ## ver.0.1.7 (2026-05-24)
 
 - Added Dockerfile for Windows, macOS, and Linux usage through Docker Desktop.
