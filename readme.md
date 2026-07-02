@@ -59,6 +59,12 @@ Windows上でGNSSバイナリデータを扱う場合は、``cmd.exe``やPowerSh
 | Galileo HAS |[gale6read.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/ja/gale6read.md) |
 |BeiDou PPP-B2b | [bdsb2read.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/ja/bdsb2read.md)|
 
+## RTCM形式変換
+
+| conversion | code |
+|:----:|:-------:|
+| QZS L6 &rarr; RTCM message type 4050 | [l6rtcm4050.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/ja/l6rtcm4050.md) |
+
 ## GNSS受信機データ変換
 
 | GNSS receiver | code | QZS L6 | QZS L1S | Galileo HAS | Galileo I/NAV | BeiDou B2b |

@@ -8,7 +8,7 @@
 
 ```bash
 $ gale6read.py --help
-usage: gale6read.py [-h] [-c] [-m] [-s] [-t TRACE]
+usage: gale6read.py [-h] [-c] [-m] [-s] [-t TRACE] [--icd-test]
 
 Galileo E6B message read, QZS L6 Tool ver.x.x.x
 
@@ -18,6 +18,7 @@ options:
   -m, --message         show display messages to stderr
   -s, --statistics      show HAS statistics in display messages.
   -t TRACE, --trace TRACE show display verbosely: 1=detail, 2=bit image.
+  --icd-test            execute the self test described in the Galileo HAS ICD and exit.
 ```
 
 ``-c``オプションを与えると、強制的にカラーにて状態表示します。デフォルトでは、出力先がターミナルであれば、状態表示はカラーにて表示されます。出力先がそれ以外であれば、カラー表示されません。
@@ -27,6 +28,8 @@ options:
 ``-s``オプションを与えると、メッセージの統計情報も出力されます。
 
 ``-t``オプションを与えると、メッセージ内容の詳細が表示されます。このオプションは整数値とともに用います。数値1では詳細を、数値2ではそれに加えて、ビットイメージを表示します。
+
+``--icd-test``オプションを与えると、標準入力を使わず、Galileo HAS ICD（Interface Control Document）付属のセルフテスト用データを用いた自己診断を実行して終了します。
 
 例えば、サンプルディレクトリにあるPocket SDRログファイル``20230305-063900has.psdr``を[psdrread.py](psdrread.md)にてHAS生データを抽出し、``gale6read.py``にて内容表示します。
 

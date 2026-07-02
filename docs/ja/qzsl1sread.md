@@ -6,7 +6,7 @@
 
 ```bash
 $ qzsl1sread.py --help
-usage: qzsl1sread.py [-h] [-c] [-t TRACE] [file ...]
+usage: qzsl1sread.py [-h] [-c] [-t TRACE] [--jp] [file ...]
 
 Quasi-zenith satellite (QZS) L1S message read, QZS L6 Tool ver.x.x.x
 
@@ -17,6 +17,7 @@ options:
   -h, --help            show this help message and exit
   -c, --color           apply ANSI color escape sequences even for non-terminal.
   -t TRACE, --trace TRACE show display verbosely: 1=subtype detail, 2=subtype and bit image.
+  --jp                  show DCR (disaster and crisis management report) in Japanese.
 ```
 
 ファイル名が与えられなければ、標準入力から読み取ります。入力形式は、みちびき公式ページの[SLASアーカイブ](https://sys.qzss.go.jp/dod/en/archives/slas.html)と同様です。最初に、1バイト（8ビット）のPRN（pseudo random noise）番号の後、32バイト（250ビット、残りはゼロパディング）のデータが続きます。
@@ -26,6 +27,8 @@ options:
 ``-c``オプションを与えると、強制的にカラーにて状態表示します。デフォルトでは、出力先がターミナルであれば、状態表示はカラーにて表示されます。出力先がそれ以外であれば、カラー表示されません。
 
 ``-t``オプションを与えると、メッセージ内容の詳細が表示されます。このオプションは整数値とともに用います。数値1では詳細を、数値2ではそれに加えて、ビットイメージを表示します。
+
+``--jp``オプションを与えると、災害・危機管理通報（DCR: disaster and crisis management report）を日本語で表示します。デフォルトでは英語表示です。
 
 例えば、サンプルディレクトリにあるu-blox ZED-F9P受信機生データファイル``20230919-114418.ubx``を[ubxread.py](ubxread.md)にてL1S生データを抽出し、``qzsl1sread.py``にて内容表示します。
 

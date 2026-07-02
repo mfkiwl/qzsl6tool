@@ -8,7 +8,7 @@ The ``--help`` option displays the options it accepts.
 
 ```bash
 $ gale6read.py --help
-usage: gale6read.py [-h] [-c] [-m] [-s] [-t TRACE]
+usage: gale6read.py [-h] [-c] [-m] [-s] [-t TRACE] [--icd-test]
 
 Galileo E6B message read, QZS L6 Tool ver.x.x.x
 
@@ -18,6 +18,7 @@ options:
   -m, --message         show display messages to stderr
   -s, --statistics      show HAS statistics in display messages.
   -t TRACE, --trace TRACE show display verbosely: 1=detail, 2=bit image.
+  --icd-test            execute the self test described in the Galileo HAS ICD and exit.
 ```
 
 When the ``-c`` option is given, it forces the status display to appear in color. By default, if the output destination is a terminal, the status display appears in color. If the output destination is something else, color display is not used.
@@ -27,6 +28,8 @@ When the ``-m`` option is given, it outputs the status display to standard error
 When the ``-s`` option is given, it also outputs the statistics information.
 
 When the ``-t`` option is given, it output detail on the messages. This option needs integer argument. The value 1 produces the detailed information, and the value 2 provides bit image display in addition of the detailed information.
+
+When the ``--icd-test`` option is given, it runs a self test using the sample data attached to the Galileo HAS ICD (Interface Control Document) instead of reading standard input, and then exits.
 
 For example, we extract HAS raw data from Pocket SDR logfile ``20230305-063900has.psdr`` with [psdrread.py](psdrread.md), and display it with ``gale6read.py``:
 
