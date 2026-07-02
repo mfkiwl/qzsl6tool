@@ -4,7 +4,7 @@ This program reads QZSS L1S format data from standard input or a file and output
 
 ```bash
 $ qzsl1sread.py --help
-usage: qzsl1sread.py [-h] [-c] [-t TRACE] [file ...]
+usage: qzsl1sread.py [-h] [-c] [-t TRACE] [--jp] [file ...]
 
 Quasi-zenith satellite (QZS) L1S message read, QZS L6 Tool ver.x.x.x
 
@@ -15,6 +15,7 @@ options:
   -h, --help            show this help message and exit
   -c, --color           apply ANSI color escape sequences even for non-terminal.
   -t TRACE, --trace TRACE show display verbosely: 1=subtype detail, 2=subtype and bit image.
+  --jp                  show DCR (disaster and crisis management report) in Japanese.
 ```
 
 If no filename is provided, it reads from standard input. The input format is the same as the [SLAS Archive](https://sys.qzss.go.jp/dod/en/archives/slas.html) on the QZSS official page. Initially, 1 byte (8 bits) of PRN (pseudo random noise) number is followed by 32 bytes (250 bits, the rest is zero-padding) of data.
@@ -24,6 +25,8 @@ Terminal output is displayed in color using ANSI escape sequences. Redirecting t
 When the ``-c`` option is given, it forces the status display to appear in color. By default, if the output destination is a terminal, the status display appears in color. If the output destination is something else, color display is not used.
 
 When the ``-t`` option is given, it output detail on the messages. This option needs integer argument. The value 1 produces the detailed information, and the value 2 provides bit image display in addition of the detailed information.
+
+When the ``--jp`` option is given, it shows the DCR (disaster and crisis management report) content in Japanese. By default, it is shown in English.
 
 For example, we extract QZS L1S raw data from Allystar receiver raw data sample ``20230919-114418.ubx`` with [ubxread.py](ubxread.md), and display it with ``qzsl1sread.py``:
 

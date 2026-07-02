@@ -59,12 +59,18 @@ Those who use Windows Git CLI, please execute ``git config --global core.autocrl
 | Galileo HAS |[gale6read.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/gale6read.md) |
 |BeiDou PPP-B2b | [bdsb2read.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/bdsb2read.md)|
 
+## RTCM Format Conversion
+
+| conversion | code |
+|:----:|:-------:|
+| QZS L6 &rarr; RTCM message type 4050 | [l6rtcm4050.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/l6rtcm4050.md) |
+
 ## GNSS Receiver Data Conversion
 
 | GNSS receiver | code | QZS L6 | QZS L1S | Galileo HAS | Galileo I/NAV | BeiDou B2b |
 |:----:|:---:| :-------:|:-----------:|:--------:|:---:|:---:|
 | Allystar HD9310 option C | [alstread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/alstread.md) |``-l`` option | | | | |
-| [Pocket SDR](https://github.com/tomojitakasu/PocketSDR) | [psdrread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/psdrread.md) | ``-l`` option | ``-l1s`` option | ``-e`` option | ``-i`` option| ``-b`` option|
+| [Pocket SDR](https://github.com/tomojitakasu/PocketSDR) | [psdrread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/psdrread.md) | ``-l`` option |  | ``-e`` option | ``-i`` option| ``-b`` option|
 | NovAtel OEM729 | [novread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/novread.md) | | | ``-e`` option | | |
 | Septentrio mosaic-X5 | [septread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/septread.md) | | | ``-e`` option | | ``-b`` option|
 | Septentrio mosaic-CLAS | [septread.py](https://github.com/yoronneko/qzsl6tool/blob/main/docs/en/septread.md) |``-l`` option | | | | |
